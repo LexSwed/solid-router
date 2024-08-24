@@ -12,22 +12,32 @@ export {
   useResolvedPath,
   useSearchParams,
   useBeforeLeave,
+  usePreloadRoute
 } from "./routing.js";
 export { mergeSearchString as _mergeSearchString } from "./utils.js";
 export * from "./data/index.js";
 export type {
   Location,
   LocationChange,
+  MatchFilter,
+  MatchFilters,
   NavigateOptions,
   Navigator,
   OutputMatch,
   Params,
+  PathMatch,
   RouteSectionProps,
-  RouteLoadFunc,
-  RouteLoadFuncArgs,
+  RoutePreloadFunc,
+  RoutePreloadFuncArgs,
   RouteDefinition,
+  RouteDescription,
+  RouteMatch,
   RouterIntegration,
   RouterUtils,
   SetParams,
-  BeforeLeaveEventArgs
+  BeforeLeaveEventArgs,
+  RouteLoadFunc,
+  RouteLoadFuncArgs,
+  RouterResponseInit,
+  CustomResponse
 } from "./types.js";

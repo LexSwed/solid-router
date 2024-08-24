@@ -1,5 +1,68 @@
 # @solidjs/router
 
+## 0.14.3
+
+### Patch Changes
+
+- 19a21cc: fix async store references
+- f8aaf16: make url transform consistent
+- 86c3b1f: better handling of query only navigation
+
+## 0.14.2
+
+### Patch Changes
+
+- bc3d8e3: expose .latest from createAsync
+- fc6ac53: fix #464 flaky hydration bail out
+- 3295502: fix hydration cancellation on browser events
+
+## 0.14.1
+
+### Patch Changes
+
+- 6144da8: fix Response type narrowing in submission APIs
+
+## 0.14.0
+
+### Minor Changes
+
+- e4a13f6: Response helpers return responses, cache/action filter them out
+- bd9f19a: default form actions to url encoded
+- 5d9263b: rename load to preload
+
+### Patch Changes
+
+- a7e4062: fix #457 extra leading slashes on path
+- 4b4536e: add usePreloadRoute export
+- 8cc0530: hack the types to work a bit better with Response Unions
+
+## 0.13.6
+
+### Patch Changes
+
+- 7344f69: Handle absolute redirects within `cache` on server
+- 8263115: Forward absolute redirects inside `cache` from server to client
+- 8fbf74a: Treat `window.location.hash` as URI encoded
+- e9fd55d: fix #449 No JS submissions not working
+- f311f4a: fix #452 useSubmission types/references
+- 2f05f37: Make isRouting more reliable + other fixes
+- 618ef17: performance improvement leveraging redirects in loadfn
+- d81473a: usePreloadRoute method pre-release
+
+## 0.13.5
+
+### Patch Changes
+
+- bfb059f: types Route -> RouteDescription
+
+## 0.13.4
+
+### Patch Changes
+
+- 00e37fd: Export all types used in public API
+- 2e90de5: Fix `HashRouter` state reset with `replace: false`
+- 75472d2: Fix useCurrentMatches a getter function
+
 ## 0.13.3
 
 ### Patch Changes

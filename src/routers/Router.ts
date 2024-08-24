@@ -11,9 +11,9 @@ export type RouterProps = BaseRouterProps & { url?: string, actionBase?: string,
 export function Router(props: RouterProps): JSX.Element {
   if (isServer) return StaticRouter(props);
   const getSource = () => {
-    const url = window.location.pathname + window.location.search;
+    const url = window.location.pathname.replace(/^\/+/, "/") + window.location.search;
     return {
-      value: props.transformUrl ? props.transformUrl(url) + window.location.hash : url + window.location.hash,
+      value: url + window.location.hash,
       state: window.history.state
     }
   };
@@ -26,7 +26,7 @@ export function Router(props: RouterProps): JSX.Element {
       } else {
         window.history.pushState(state, "", value);
       }
-      scrollToHash(window.location.hash.slice(1), scroll);
+      scrollToHash(decodeURIComponent(window.location.hash.slice(1)), scroll);
       saveCurrentDepth();
     },
     init: notify => bindEvent(window, "popstate",
